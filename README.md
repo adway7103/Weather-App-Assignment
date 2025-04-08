@@ -1,12 +1,103 @@
-# React + Vite
+# WeatherVista - Weather Dashboard
+A beautiful, responsive weather dashboard built with React, Tailwind CSS, and Framer Motion. Get real-time weather data and forecasts with an elegant dark/light mode interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- 🌦️ Real-time weather data
+- 📊 5-day forecast with interactive charts
+- 🌗 Dark/Light mode toggle
+- 📱 Fully responsive design
+- 🚀 Fast and lightweight
+- 🌍 Global location search
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (v14 or later)
+- npm (v6 or later) or yarn
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/weathervista.git
+   cd weathervista
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_OPENWEATHER_API_KEY=your_api_key_here
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Build for production**
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+## Usage
+
+### Getting Started
+1. Open the app in your browser (default: `http://localhost:5173`)
+2. Use the search bar to find weather for any location
+3. Toggle between dark/light mode using the moon/sun icon
+
+### Dashboard Features
+- **Home**: Overview of current weather conditions
+- **Dashboard**: Detailed forecast with temperature charts
+- **Location Search**: Find weather for any city worldwide
+
+## Deployment
+
+### Netlify
+1. Import your Git repository
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Add environment variables
+
+## Technologies Used
+
+- ⚛️ React
+- 🎨 Tailwind CSS
+- ✨ Framer Motion
+- 🌐 React Router
+- 📊 Recharts
+- 🌦️ OpenWeatherMap API
+
+🔧 API Integration
+OpenWeatherMap API
+Required API Key: Get yours at OpenWeatherMap or "a13cbfbee52e8a1ed0656c1346845c79"
+
+Rate Limits:
+
+Free tier: 60 calls/minute
+
+Paid plans available for higher limits
+
+Endpoints Used:
+
+Geocoding API (location search)
+
+Current Weather Data
+
+5-Day Weather Forecast
+
+---
+
+For support or questions, please open an issue on GitHub or contact adwaylachhiramka@gmail.com .
