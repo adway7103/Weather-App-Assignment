@@ -25,7 +25,7 @@ export const WeatherProvider = ({ children }) => {
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
   const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
   const FORECAST_API_URL = "https://api.openweathermap.org/data/2.5/forecast";
-  const GEOCODING_API_URL = "http://api.openweathermap.org/geo/1.0/direct";
+  const GEOCODING_API_URL = "https://api.openweathermap.org/geo/1.0/direct";
 
   const processForecastData = useCallback((data) => {
     const dailyData = {};
