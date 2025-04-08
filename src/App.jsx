@@ -35,11 +35,8 @@ const App = () => {
       <Router>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path="/" element={<HomePage darkMode={darkMode} />} />
-          <Route
-            path="/weather"
-            element={<WeatherDashboard darkMode={darkMode} />}
-          />
+          <Route path="/home" element={<HomePage darkMode={darkMode} />} />
+          <Route path="/" element={<WeatherDashboard darkMode={darkMode} />} />
           <Route path="*" element={<NotFound darkMode={darkMode} />} />
         </Routes>
       </Router>
@@ -94,7 +91,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link
-                to="/weather"
+                to="/home"
                 className="flex items-center px-4 py-2 text-white/90 hover:text-white transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
