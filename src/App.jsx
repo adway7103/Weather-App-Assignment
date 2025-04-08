@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import WeatherDashboard from "./pages/WeatherDashboard";
 import NotFound from "./pages/NotFound";
-import { FaSun, FaMoon, FaHome, FaChartLine } from "react-icons/fa";
+import {
+  FaSun,
+  FaMoon,
+  FaHome,
+  FaChartLine,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { WeatherProvider } from "./context/WeatherContext";
 import { motion } from "framer-motion";
 const App = () => {
@@ -41,10 +48,11 @@ const App = () => {
 };
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="bg-gradient-to-r from-blue-600 to-blue-500 dark:from-blue-800 dark:to-blue-900 p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo with animation */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
@@ -56,13 +64,28 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </Link>
         </motion.div>
 
-        {/* Navigation Links */}
-        <div className="flex items-center space-x-6">
-          <div className="hidden md:flex items-center space-x-1 bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-full px-2 py-1">
+        <button
+          className="md:hidden p-2 rounded-lg bg-white/20"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? (
+            <FaTimes className="text-white text-xl" />
+          ) : (
+            <FaBars className="text-white text-xl" />
+          )}
+        </button>
+
+        <div
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row absolute md:static top-16 left-0 right-0 bg-blue-600 dark:bg-blue-800 md:bg-transparent z-50 items-center space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0`}
+        >
+          <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-1 bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-lg md:rounded-full px-2 py-1 w-full md:w-auto">
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link
                 to="/"
                 className="flex items-center px-4 py-2 text-white/90 hover:text-white transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
               >
                 <FaHome className="mr-2" />
                 <span>Home</span>
@@ -73,6 +96,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               <Link
                 to="/weather"
                 className="flex items-center px-4 py-2 text-white/90 hover:text-white transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
               >
                 <FaChartLine className="mr-2" />
                 <span>Dashboard</span>
@@ -80,14 +104,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </motion.div>
           </div>
 
-          {/* Dark Mode Toggle - Enhanced */}
           <motion.button
             onClick={toggleDarkMode}
             whileTap={{ scale: 0.9 }}
             className="p-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 relative overflow-hidden"
-            aria-label={
-              darkMode ? "Switch to light mode" : "Switch to dark mode"
-            }
           >
             <motion.div
               animate={darkMode ? "light" : "dark"}
@@ -104,8 +124,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 <FaMoon className="text-blue-100" />
               )}
             </motion.div>
-
-            {/* Animated background */}
             <motion.span
               className="absolute inset-0 bg-white/10 rounded-full"
               initial={{ scale: 0 }}

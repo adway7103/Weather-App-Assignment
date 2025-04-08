@@ -74,7 +74,7 @@ const WeatherDashboard = () => {
                     fetchSuggestions(e.target.value);
                     setIsSuggestionsOpen(true);
                   }}
-                  placeholder="Enter a city name..."
+                  placeholder="Enter a city name...(Eg: Delhi, Mumbai)"
                   className="w-full pl-10 pr-12 py-3 rounded-xl border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-200"
                   disabled={loading}
                   onFocus={() => setIsSuggestionsOpen(true)}

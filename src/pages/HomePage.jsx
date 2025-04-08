@@ -35,7 +35,7 @@ const HomePage = ({ darkMode }) => {
               Weather Insights
             </h1>
             <p
-              className={`text-xl md:text-2xl mb-10 ${
+              className={`text-xl md:text-2xl p-1 mb-10 ${
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
@@ -52,7 +52,7 @@ const HomePage = ({ darkMode }) => {
                     : "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-blue-400/30 hover:from-blue-400 hover:to-blue-500"
                 }`}
               >
-                Explore Dashboard
+                Check Weather
               </Link>
             </motion.div>
           </div>
@@ -101,7 +101,7 @@ const HomePage = ({ darkMode }) => {
                 </p>
                 <div className="flex items-center space-x-4 mt-6">
                   <a
-                    href="https://github.com/yourusername/weather-insights"
+                    href="https://github.com/adway7103/Weather-App-Assignment"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex items-center px-4 py-2 rounded-lg ${
