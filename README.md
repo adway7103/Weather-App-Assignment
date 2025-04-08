@@ -20,8 +20,8 @@ A beautiful, responsive weather dashboard built with React, Tailwind CSS, and Fr
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/weathervista.git
-   cd weathervista
+   git clone https://github.com/adway7103/Weather-App-Assignment.git
+   cd Weather-App-Assignment
    ```
 
 2. **Install dependencies**
@@ -34,7 +34,7 @@ A beautiful, responsive weather dashboard built with React, Tailwind CSS, and Fr
 3. **Set up environment variables**
    Create a `.env` file in the root directory:
    ```env
-   VITE_OPENWEATHER_API_KEY=your_api_key_here
+   VITE_OPENWEATHER_API_KEY=a13cbfbee52e8a1ed0656c1346845c79
    ```
 
 4. **Run the development server**
