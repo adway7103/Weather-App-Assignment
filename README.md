@@ -34,7 +34,7 @@ A beautiful, responsive weather dashboard built with React, Tailwind CSS, and Fr
 3. **Set up environment variables**
    Create a `.env` file in the root directory:
    ```env
-   VITE_OPENWEATHER_API_KEY=a13cbfbee52e8a1ed0656c1346845c79
+   VITE_WEATHER_API_KEY=a13cbfbee52e8a1ed0656c1346845c79
    ```
 
 4. **Run the development server**
